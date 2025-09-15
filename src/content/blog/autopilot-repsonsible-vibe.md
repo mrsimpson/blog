@@ -71,7 +71,7 @@ Das System erkennt, dass verschiedene Aufgaben völlig unterschiedliche Prozesse
 - **Content Creation**: Discovery → Story → Writing → Illustration → Distribution  
   *Für Blogposts, Präsentationen, Dokumentationen*
 
-**Das Geniale:** Das LLM bekommt nicht nur strategische Richtung, sondern den **richtigen Prozess für die jeweilige Aufgabe**. Ein Bugfix braucht andere Schritte als ein Greenfield-Projekt, und das System passt sich automatisch an.
+**Der Kerngedanke:** Das LLM bekommt nicht nur strategische Richtung, sondern den **richtigen Prozess für die jeweilige Aufgabe**. Ein Bugfix braucht andere Schritte als ein Greenfield-Projekt, und das System passt sich automatisch an.
 
 Schauen wir uns den Unterschied an: Ein **Greenfield-Projekt** durchläuft die Phasen Ideation → Architecture → Plan → Code → Document, weil bei neuen Projekten gründliche Vorplanung entscheidend ist:
 
@@ -85,7 +85,7 @@ Ein **Bugfix** hingegen folgt einem völlig anderen Muster: Reproduce → Analyz
 
 Hier sehen wir das System in Aktion - es erkennt automatisch, wann eine Phase abgeschlossen ist und leitet mit einem spezifischen Prompt zur nächsten über:
 
-![EPCC Workflow mit Transition](./images/screenshot-epcc-workflow-with-plan-complete-transitino.png)
+![EPCC Workflow mit Transition](./images/screenshot-epcc-workflow-with-plan-complete-transition.png)
 Über den Plan, der dabei übermittelt wird, wird der Kontext gefüttert und kontinuierlich erweitert.
 
 Das LLM behält seine volle kreative Flexibilität, bekommt aber die strategische Orientierung, die ihm normalerweise fehlt.
