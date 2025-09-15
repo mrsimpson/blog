@@ -1,0 +1,5 @@
+# Exclude SQLite database files
+*.sqlite
+*.sqlite-*
+conversation-state.sqlite*
+.DS_Store
