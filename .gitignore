@@ -27,3 +27,4 @@ pnpm-debug.log*
 # manual exports of chats
 composer-conversations/cursor-chat-export*
 .vibe/*.sqlite
+.DS_Store
