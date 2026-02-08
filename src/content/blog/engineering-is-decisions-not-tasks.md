@@ -101,7 +101,7 @@ _Notizen (z.B. Zielgruppe, Scope) sind wichtiger Kontext – nicht nur Entscheid
 Responsible-vibe-mcp integriert beads über ein Plugin-System. Das Geniale: **Beide Systeme arbeiten zusammen, ohne sich zu vermischen.**
 
 ![Initialer Plan: beads-Phasen + Entrance Criteria im Plan](./images/33-initial-plan-setup-phases-in-beads-entrance-criteria.png)
-_Initialer Setup: Tasks/Phasen in beads, Eintrittskriterien und Entscheidungen im Plan – nicht alles upfront in ein Markdown-Dokument._
+_Schon das Aufsetzen eines Plans enthält wertvolle Entscheidungen für die Zukunft: was ist die Erwartung an das Vorgehen._
 
 ![Phase transition: Tasks entstehen inkrementell](./images/35-proceed-to-next-phase-tasks-created.png)
 _Wenn du zur nächsten Phase wechselst, entstehen die passenden Tasks. Denn erst im Verlauf einer Entwicklung erkennt man oft den Weg, den es zu beschreiten gilt._
