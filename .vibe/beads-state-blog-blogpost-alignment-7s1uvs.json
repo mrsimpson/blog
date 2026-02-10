@@ -1,0 +1,34 @@
+{
+  "conversationId": "blog-blogpost-alignment-7s1uvs",
+  "projectPath": "/Users/oliverjaegle/projects/privat/blog",
+  "epicId": "blog-3",
+  "phaseTasks": [
+    {
+      "phaseId": "discovery",
+      "phaseName": "Discovery",
+      "taskId": "blog-3.1"
+    },
+    {
+      "phaseId": "story",
+      "phaseName": "Story",
+      "taskId": "blog-3.2"
+    },
+    {
+      "phaseId": "writing",
+      "phaseName": "Writing",
+      "taskId": "blog-3.3"
+    },
+    {
+      "phaseId": "illustration",
+      "phaseName": "Illustration",
+      "taskId": "blog-3.4"
+    },
+    {
+      "phaseId": "distribution",
+      "phaseName": "Distribution",
+      "taskId": "blog-3.5"
+    }
+  ],
+  "createdAt": "2026-02-08T18:56:25.450Z",
+  "updatedAt": "2026-02-08T18:56:25.450Z"
+}
