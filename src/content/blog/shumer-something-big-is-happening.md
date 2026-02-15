@@ -8,10 +8,12 @@ description: >
 ---
 
 > **Hinweis:** Dies ist eine deutsche Übersetzung des Originalartikels von Matt Shumer, veröffentlicht am 9. Februar 2026 auf [shumer.dev](https://shumer.dev/something-big-is-happening).
+>
+> Ich habe es automatisiert übersetzen lassen (zunächst von Opus 4.5, dann überarbeit von Deepl, was wesentlich flüssiger war) und einige relevante Veränderungen und Ergänzungen mit _[...]_ gekennzeichnet.
+>
+> Matt selbst konnte ich bisher nicht um Erlaubnis fragen, da er als einzigen Kontaktweg sein X-Profil angegeben hat, das ich qua einer fehlenden X-Subscription nicht anschreiben darf. @Matt: Wenn Du das hier nicht angemessen findest, schreib mit bitte an. Ich fan den Artikel einfach enorm passend zur aktuellen Woche und wollte ihn auch meinen deutschsprachigen Freunden, Kollegen und Verwandten zur Verfügung stellen.
 
-Ich habe es automatisiert übersetzen lassen und einige relevante Veränderungen und Ergänzungen mit _[...]_ gekennzeichnet. Ansonsten habe ich die teils holprige Übersetzung von Opus 4.5 so belassen, um nicht zu viel inhaltlich anzupassen.
-
-Matt selbst konnte ich bisher nicht um Erlaubnis fragen, da er als einzigen Kontaktweg sein X-Profil angegeben hat, das ich qua einer fehlenden X-Subscription nicht anschreiben darf. @Matt: Wenn Du das hier nicht angemessen findest, schreib mit bitte an. Ich fan den Artikel einfach enorm passend zur aktuellen Woche und wollte ihn auch meinen deutschsprachigen Freunden, Kollegen und Verwandten zur Verfügung stellen.
+Wenn im Folgenden also von "ich" gesprochen wird, ist damit Matt gemeint – wobei ich sehr vielem einfach nur "ich, Oliver, auch" hinzufügen könnte.
 
 ---
 
