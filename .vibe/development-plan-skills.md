@@ -81,26 +81,102 @@ Blogpost über Agent Skills (agentskills.io) schreiben, der zeigt:
 - **Progressive Disclosure:** Das Konzept von "nur laden, was gebraucht wird" passt perfekt zum Context-Engineering-Narrativ
 - **Positionierung:** Skills als vierte Säule im Context-Engineering-Ökosystem
 
+### Story-Phase
+- **Anknüpfung:** An "Context is all you need" Post anknüpfen - das Nudelsuppen-Narrativ fortsetzen
+- **Metapher "Nudelsuppe":** Alles ist letztlich Context/Nudelsuppe, aber man kann effizienter kochen
+- **Zentrale Differenzierung:** 
+  - **Progressive Disclosure bei Skills:** Name/Description initial → volle Instructions bei Bedarf (lightweight, portabel)
+  - **Progressive Disclosure bei responsible-vibe:** Dynamische Tool-Rückgaben als Prompts (mächtig, aber komplexer)
+  - **Vorteil von Skills:** Scripts + modulare Prompts paketieren = leichtgewichtige, mächtige Erweiterungen
+- **Vorteil gegenüber MCP Tools:** 
+  - MCP Remote Server: Schwergewichtig (Prozesse, Deployment)
+  - MCP STDIO Server: Leichtgewichtig im Deployment, aber umfangreicher Kontrakt (nicht leicht bereitzustellen)
+  - MCP Tools: Nur ein Aspekt, nicht modularisiert
+  - Skills: Leichtgewichtig UND einfach bereitzustellen (nur Dateien)
+- **Beispiel:** PowerPoint-Skill (anthropics/skills/pptx) statt PDF
+- **Fokus:** Konzeptionelle Ebene, KEINE konkrete Lösung/Implementierung in diesem Post
+- **Hook am Ende:** Skills sind konzeptionell super, ABER es gibt Einschränkungen (Client-Abhängigkeit für Discoverability) → Teaser für nächsten Post (mcp-server/agent-skills als Lösung)
+- **Story-Arc:** Von "Context is all you need" → "Aber wie verteilen wir nützlichen Context?" → Skills als konzeptionelle Antwort → Ausblick auf praktische Herausforderungen
+
 ## Notes
 
 ### Recherche-Ergebnisse zu agentskills.io:
 - **Format:** Einfach - nur `SKILL.md` mit YAML-Frontmatter + Markdown-Instructions
-- **Adoption:** Breite Unterstützung (Cursor, Claude, VSCode, JetBrains Junie, GitHub, etc.)
-- **Kernkonzept:** Progressive Disclosure - nur Name/Description initial, dann full instructions bei Bedbedarf
+- **Adoption:** Breite Unterstützung (30+ Tools inkl. Cursor, Claude, VSCode, JetBrains Junie, GitHub)
+- **Kernkonzept:** Progressive Disclosure - nur Name/Description initial, dann full instructions bei Bedarf
 - **Struktur:** `my-skill/` mit `SKILL.md` (required), `scripts/`, `references/`, `assets/` (optional)
 - **Analogie zu prompts-mcp:** Beide sind "Prompts as Code", aber Skills sind umfassender (können Scripts/Assets beinhalten)
 
 ### Verbindung zu bisherigen Posts:
+- **context-is-all-you-need:** "Alles ist Nudelsuppe" - Context Engineering als Kernkompetenz
 - **context-engineering-weniger-ist-mehr:** Noise-Filtering mit quiet-shell
 - **prompts-als-code:** Prompts als strukturierte, versionierte Artefakte
 - **alignment-responsible-vibe:** Kontext für besseres Alignment
 
-### Mögliche Story-Struktur:
-1. **Hook:** Das Problem - Wiederkehrende Aufgaben, die jeder Agent neu lernen muss
-2. **Lösung:** Skills als portables Wissen
-3. **Wie es funktioniert:** Progressive Disclosure erklärt
-4. **Warum es mehr ist:** Team-Konventionen, nicht nur Context
-5. **Ökosystem:** Die vierte Säule neben den anderen Tools
+### Story-Struktur (ausgearbeitet):
+
+#### 1. Hook & Anknüpfung (Intro)
+- **Einstieg:** Referenz zu "Context is all you need" - Nudelsuppe-Metapher
+- **Problem-Formulierung:** Context ist wichtig, aber wie *teilen* wir wertvollen Context?
+- **Szenario:** Ein Agent lernt mühsam, wie man Präsentationen erstellt. Nächster Agent? Muss es wieder lernen.
+- **Die Frage:** Was, wenn Agents Fähigkeiten wie Module importieren könnten?
+
+#### 2. Das Problem vertiefen (Hauptteil I)
+- **Bisherige Lösungen und ihre Trade-offs:**
+  - **MCP Remote Server:** Schwergewichtig - Server-Prozesse, Deployment-Overhead
+  - **MCP STDIO Server:** Leichtgewichtig im Deployment, aber umfangreicher Kontrakt → nicht einfach bereitzustellen
+  - **MCP Tools:** Nur ein Aspekt (keine modulare Paketierung von Wissen + Code)
+  - **Prompts:** Lightweight, aber begrenzt (nur Text, keine Scripts/Assets)
+  - **Copy-Paste:** Team-Konventionen gehen verloren
+- **Was fehlt:** Leichtgewichtig UND einfach bereitzustellen UND modular
+
+#### 3. Die Lösung: Agent Skills (Hauptteil II)
+- **Was sind Skills:** `SKILL.md` + optional Scripts/Assets - nur Dateien, kein Server
+- **Progressive Disclosure erklärt:**
+  - Discovery: Nur Name/Description geladen (minimaler Context-Footprint)
+  - Activation: Volle Instructions bei Bedarf
+  - Execution: Scripts ausführen, Referenzen nutzen
+- **Konkretes Beispiel:** PowerPoint-Skill (anthropics/skills/pptx)
+  ```
+  pptx/
+  ├── SKILL.md (name, description, instructions)
+  ├── scripts/create_presentation.py
+  └── references/...
+  ```
+- **Konzeptionelle Ebene:** Wie Skills *prinzipiell* funktionieren - keine konkrete Implementierung
+- **Vergleich zu responsible-vibe:** Beide nutzen Progressive Disclosure, aber unterschiedlich:
+  - responsible-vibe: Dynamische Tool-Rückgaben (mächtig, projektspezifisch, zur Laufzeit)
+  - Skills: Statische Pakete (portabel, wiederverwendbar, deklarativ)
+
+#### 4. Warum das mehr ist als Context-Engineering (Hauptteil III)
+- **Team-Konventionen:** Nicht nur "wie mache ich X", sondern "wie machen WIR X"
+- **Portabilität:** Skill funktioniert in Cursor, Claude, VSCode - überall (theoretisch)
+- **Versionierung:** Skills im Git, reviewbar, iterativ verbesserbar
+- **Ökosystem:** 30+ Tools unterstützen bereits Skills
+- **Die neuen Zutaten zur Suppe:** Scripts + modulare Prompts = mächtige, leichtgewichtige Pakete
+- **Konzept vs. Implementierung:** Auf konzeptioneller Ebene bleiben
+
+#### 5. Das größere Bild: Konzeptionelle Einordnung (Schluss I)
+- **Nicht "Die vier Säulen"** - zu lösungsorientiert für diesen Post
+- **Stattdessen:** Skills als konzeptioneller Ansatz für wiederverwendbares Agent-Wissen
+- **Unterschied zu bestehenden Tools:** Skills bringen *neuen* Context (Fähigkeiten), nicht nur Management von vorhandenem Context
+- **Offenheit:** Das Skills-Format ist offen, von Anthropic initiiert, aber Community-getrieben
+
+#### 6. Hook für nächsten Post (Schluss II)
+- **"Alles ist Nudelsuppe":** Ja, aber mit den richtigen Zutaten wird es eine gute Suppe
+- **Skills sind konzeptionell super, ABER:**
+  - **Problem:** Client-Abhängigkeit - Skills müssen in Client-spezifische Ordner installiert werden
+  - **Challenge:** Teams mit unterschiedlichen Clients (Cursor, Claude, VSCode) → keine zentrale Discoverability
+  - **Teaser:** "Ich habe da schon eine Lösung dafür (mcp-server/agent-skills), aber das ist Inhalt des nächsten Posts..."
+- **Call-to-Action für DIESEN Post:** Skills-Format verstehen, Konzept verinnerlichen
+
+### Schlüsselbotschaften pro Abschnitt:
+1. **Intro:** Context teilen ist genauso wichtig wie Context nutzen
+2. **Problem:** Bisherige Lösungen haben Trade-offs (Schwergewicht ODER eingeschränkt ODER nicht modular)
+3. **Lösung:** Skills sind leichtgewichtig, modular UND einfach (nur Dateien) - Progressive Disclosure als Kern
+4. **Tiefe:** Skills sind Team-Werkzeug, nicht nur Einzel-Hack (Konventionen, Versionierung)
+5. **Einordnung:** Konzeptionell neue Kategorie - wiederverwendbare Fähigkeiten, nicht nur Context-Management
+6. **Ausblick:** Konzept ist super, Praxis hat Haken (Client-Abhängigkeit) → nächster Post
 
 ---
 *This plan is maintained by the LLM and uses beads CLI for task management. Tool responses provide guidance on which bd commands to use for task management.*
