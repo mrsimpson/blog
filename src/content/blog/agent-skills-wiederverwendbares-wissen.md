@@ -47,7 +47,7 @@ Für Enterprise-Setups perfekt. Für "Hey, ich möchte meinem Agenten beibringen
 
 ### MCP STDIO Server: Leichtgewichtig im Deployment, aber...
 
-STDIO-basierte MCP Server sind besser - sie laufen lokal, kein separater Prozess nötig.
+STDIO-basierte MCP Server sind weniger komplex - sie laufen lokal, kein separater Prozess nötig.
 
 **Das Problem:** Der MCP-Kontrakt ist umfangreich:
 
@@ -57,12 +57,6 @@ STDIO-basierte MCP Server sind besser - sie laufen lokal, kein separater Prozess
 - Nicht mal eben in 10 Minuten gemacht
 
 Leichtgewichtig im **Deployment**, aber nicht leichtgewichtig in der **Bereitstellung**.
-
-### MCP Tools: Nur ein Aspekt
-
-MCP Tools sind großartig für einzelne Funktionen. Aber sie sind genau das: **Tools**. Nicht modulares, paketiertes Wissen.
-
-Du kannst einem Agenten ein Tool geben, das PDFs liest. Aber nicht ein vollständiges "wie verarbeite ich PDFs professionell"-Paket mit Instructions, Beispielen, Scripts und Referenzen.
 
 ### Prompts: Leichtgewichtig, aber limitiert
 
@@ -236,8 +230,240 @@ Die Client-Abhängigkeit ist real. Aber lösbar.
 - [Skills-Spezifikation](https://agentskills.io)
 - [Beispiel-Skills](https://github.com/anthropics/skills)
 
-Im nächsten Post zeige ich, wie man Progressive Disclosure anders implementieren kann - und dabei gleich das Team-Sharing-Problem löst.
+Im nächsten Post zeige ich, wie man Progressive Disclosure von Skills effizient implementieren kann - und dabei gleich das Team-Sharing-Problem löst.
 
 ---
 
 **Frage an dich:** Nutzt du Skills? Wie teilst du Agent-Wissen im Team? Ich freue mich auf den Austausch!
+
+---
+
+# 🇬🇧 Agent Skills – Capabilities in a Neat Package
+
+![An agent opens a package. Inside: a tool and an instruction manual. It's delighted.](./images/41-skill-package.png)
+
+> tl;dr: "Skills are a lightweight, open standard for packaging agent capabilities. Progressive disclosure keeps them efficient, modularity makes them powerful. Conceptually brilliant – with some practical challenges."
+
+When working with agents, it's all about context. We all know that by now.
+
+As I wrote in [Context is all you need](/blog/context-is-all-you-need): Context engineering is the art of feeding your LLM the right information at the right time. There's no secret ingredient here – it's all just noodle soup, as Po learns in Kung Fu Panda. It's just about what you toss in when.
+
+But one question I left unanswered back then: **How do I make valuable context reusable?**
+
+Picture this: You painstakingly teach an agent how to create professional PowerPoint presentations. The agent learns layouts, formatting, best practices. After two hours of iteration, it works perfectly.
+
+Next day, your colleague sits down. Different agent, same task. And the agent? **Starts from scratch.**
+
+That's like every chef in a restaurant having to figure out how to make noodle soup from scratch every single day. Works. But inefficient.
+
+Sure, there are [prompts](/blog/prompts-als-code). You can parameterize them, version them, reuse them. But the **user has to pick them** – the agent doesn't know which prompt fits the task. And prompts are just text, no way to package tools that extend their capabilities.
+
+So the question remained: **What if agents could import capabilities like modules – and decide on their own when they need which one?**
+
+## The Problem: Trade-offs of Current Approaches
+
+If you want to give an agent new capabilities today, you've got options. But they all come with trade-offs.
+
+### MCP Remote Servers: Powerful, but Heavy
+
+The Model Context Protocol (MCP) is fantastic for tools. You build a server, the agent connects, gets new capabilities.
+
+**The problem:** Remote servers mean:
+
+- Separate server processes
+- Deployment overhead
+- Infrastructure management
+- Not trivial for quick prototyping
+
+Perfect for enterprise setups. For "Hey, I want to teach my agent how our team does code reviews"? Overkill.
+
+### MCP STDIO Servers: Lightweight in Deployment, but...
+
+STDIO-based MCP servers are less complex to handle – they run locally, no separate process needed.
+
+**The problem:** The MCP contract is substantial:
+
+- Writing a server implementation
+- Protocol handling
+- Error management
+- Not something you whip up in 10 minutes
+
+Lightweight in **deployment**, but not lightweight in **development**.
+
+### Prompts: Lightweight, but Limited
+
+As I described in [Prompts as Code](/blog/prompts-als-code): Prompts are reusable instructions. But they're just **text**. No scripts, no assets, no modular packaging.
+
+### Copy-Paste: The Anti-Pattern
+
+And then there's good old copy-paste. "Hey, use these instructions for code reviews." Works. But:
+
+- No versioning
+- Team conventions get lost
+- Everyone does it differently
+- Iterative improvement? Forget it.
+
+### What's Missing?
+
+What we really need:
+
+- **Lightweight** like prompts
+- **Easy to provide** (no complex server implementation)
+- **Modular** (instructions + scripts + assets packaged together)
+- **Versionable** (Git, not chat history)
+- **Team-ready** (share conventions)
+
+This is exactly where **Agent Skills** come in.
+
+## The Solution: Agent Skills
+
+Agent Skills are – conceptually speaking – exactly this ideal solution: Not too heavy, not too light. Just right.
+
+### What Are Skills?
+
+A skill is a **folder with a `SKILL.md` file**. That's it. No server. No infrastructure. Just files.
+
+**Example:** Anthropic's [PowerPoint skill](https://github.com/anthropics/skills/tree/main/skills/pptx)
+
+```
+skills/pptx/
+├── SKILL.md              # Instructions + Metadata
+├── scripts/              # Python/Shell Scripts
+├── editing.md            # References
+├── pptxgenjs.md          # Documentation
+└── LICENSE.txt
+```
+
+The `SKILL.md` contains YAML frontmatter and Markdown:
+
+```markdown
+---
+name: powerpoint-expert
+description: Create professional PowerPoint presentations with proper layouts and formatting
+---
+
+# PowerPoint Expert Skill
+
+## When to use this skill
+
+Use this skill when the user needs to create, modify, or review PowerPoint presentations...
+
+## How to create a presentation
+
+1. Start with the template in references/design-guide.md
+2. Use scripts/create_pptx.py for programmatic generation
+3. Follow our team's layout conventions...
+```
+
+That's all there is to it. Simple. Declarative. Portable.
+
+### Progressive Disclosure: The Key Advantage
+
+Here's where it gets interesting. Skills use **progressive disclosure** – and that's their biggest advantage over MCP tools.
+
+**How it works:**
+
+![Progressive disclosure flow](./images/42-progressive-disclosure.png)
+
+1. **Discovery Phase**: At startup, the agent loads only `name` and `description` of all available skills
+   - Minimal context footprint
+   - The agent "knows" which skills exist
+   - But doesn't load full instructions yet
+
+2. **Activation Phase**: When a task matches a skill, the agent loads the full `SKILL.md`
+   - Now the agent gets detailed instructions
+   - Plus access to scripts and references
+   - Context grows only on demand
+
+3. **Execution Phase**: The agent uses the instructions and optionally runs scripts
+   - Can invoke scripts (`scripts/create_pptx.py`)
+   - Can read references (`editing.md`, `pptxgenjs.md`)
+   - Can use assets
+
+**This is fundamentally different from MCP tools:**
+
+With MCP tools, the agent gets all tool definitions at once. With skills, it gets just the names – and loads details on demand.
+
+With 50 skills, that means:
+
+- **With MCP:** 50 complete tool definitions in context
+- **With Skills:** 50 short descriptions → One full skill guide when needed
+
+That's **context-efficient**.
+
+## More Than Just Context
+
+Skills aren't just a clever context engineering tool. They're **packaged, reusable knowledge**.
+
+The skill lives in a Git repo. Versioned. Reviewable. "**We** do code reviews this way" instead of "**I** do code reviews this way."
+
+And yes: Skills bring **new ingredients** to the noodle soup:
+
+- **Scripts:** Not just "explain how it's done" – actually "do it"
+- **Modular prompts:** Instructions in digestible chunks
+- **Assets:** Templates, examples, references – packaged together
+
+## Conceptual Framing
+
+Skills are conceptually something new in the context engineering landscape.
+
+In earlier posts, I've written about tools that **manage existing context**:
+
+- [responsible-vibe-mcp](https://github.com/mrsimpson/responsible-vibe-mcp): Process structure & phase-specific context
+- [agentic-knowledge-mcp](https://github.com/mrsimpson/agentic-knowledge-mcp): Intelligent documentation navigation
+- [quiet-shell-mcp](https://github.com/mrsimpson/quiet-shell-mcp): Noise filtering for command output
+
+**Skills are different:**
+
+Skills don't just bring **modular prompts** – they bring entire **capabilities**.
+
+They're not just another tool for context optimization. They're a conceptual approach for **reusable agent knowledge**.
+
+And the best part: **The format is open.**
+
+Initiated by Anthropic, but published as an [open standard](https://agentskills.io). The community can contribute, extend, build their own skills. Skills aren't a proprietary solution – they're an **open ecosystem** that's also gaining traction in autonomous tools (like OpenClaw, for example).
+
+## Reality Check: Sharing Is the Weakness
+
+So much for theory. Conceptually, skills are pretty cool.
+
+In practice? **Client dependency.**
+
+Skills need to be installed in **client-specific directories**:
+
+- Cursor: `~/.cursor/skills/`
+- Claude Desktop: `~/.claude/skills/`
+- VSCode: `.vscode/skills/`
+
+Your team uses different clients? Where do team skills live? How do you sync them?
+
+The **conceptual promise** ("portable, reusable") hits a **practical hurdle**: client-specific installation.
+
+### Progressive Disclosure, Reimagined
+
+So I asked myself: Can you implement progressive disclosure **differently** while leveraging the powerful standard?
+
+After all, the `descriptions` just need to get into the context somehow – and then be "extended" with full instructions on demand. That should be doable.
+
+And if you're rethinking it anyway, you might as well tackle the team-sharing weakness while you're at it...
+
+But that's for the next post. #cliffhanger
+
+## Conclusion: Neat Package, Practical Hurdle
+
+In the end, it's all noodle soup. But with the **right ingredients** (Skills: Instructions + Scripts + Assets) and the **right preparation** (Progressive Disclosure), it becomes a really good soup.
+
+Skills are conceptually brilliant: Lightweight, modular, portable.
+
+The client dependency is real. But solvable.
+
+**Links:**
+
+- [Skills specification](https://agentskills.io)
+- [Example skills](https://github.com/anthropics/skills)
+
+In the next post, I'll show how you can implement progressive disclosure of skills effectively – and solve the team-sharing problem along the way.
+
+---
+
+**Question for you:** Are you using skills? How do you share agent knowledge across your team? I'd love to hear about it!
