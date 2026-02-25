@@ -81,7 +81,18 @@ Blogpost über Agent Skills (agentskills.io) schreiben, der zeigt:
 - **Progressive Disclosure:** Das Konzept von "nur laden, was gebraucht wird" passt perfekt zum Context-Engineering-Narrativ
 - **Positionierung:** Skills als vierte Säule im Context-Engineering-Ökosystem
 
-### Story-Phase
+### Writing-Phase
+- **Datei erstellt:** `src/content/blog/agent-skills-wiederverwendbares-wissen.md`
+- **Titel angepasst:** "Agent Skills – Fähigkeiten in handlichem Paket" (fokussiert auf modulares Wissen, nicht "voneinander lernen")
+- **Description gekürzt:** Auf Kern reduziert (Progressive Disclosure, Modularität)
+- **Struktur umgesetzt:** Alle 6 Abschnitte geschrieben und gekürzt
+- **Abschnitt 4 stark gekürzt:** Von ~600 auf ~100 Wörter - Teilen als Schwäche erkannt
+- **Ausblick als Mystery:** Lösung nur angedeutet, nicht gezeigt - "Kann man Progressive Disclosure nicht anders implementieren?" - perfekter Cliffhanger
+- **Ton:** Persönlich, erfahrungsbasiert, mit PowerPoint-Skill Beispiel
+- **Länge:** ~1300 Wörter (deutlich kürzer, fokussierter)
+- **Nudelsuppe-Metapher:** Durchgängig als roter Faden
+- **Progressive Disclosure:** Ausführlich erklärt als Kern-Vorteil
+- **Cliffhanger:** Perfekt - Problem benannt, Denkrichtung angedeutet, Lösung für nächsten Post reserviert
 - **Anknüpfung:** An "Context is all you need" Post anknüpfen - das Nudelsuppen-Narrativ fortsetzen
 - **Metapher "Nudelsuppe":** Alles ist letztlich Context/Nudelsuppe, aber man kann effizienter kochen
 - **Zentrale Differenzierung:** 
