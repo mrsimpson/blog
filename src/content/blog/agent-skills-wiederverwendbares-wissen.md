@@ -8,13 +8,15 @@ tags:
 
 # Agent Skills – Fähigkeiten in handlichem Paket
 
+![Ein Agent öffnet ein Paket. Drinnen liegen ein Werkzeug und eine Anleitung. Er freut sich.](./images/41-skill-package.png)
+
 > tl;dr: "Skills sind ein leichtgewichtiger, offener Standard, um Agent-Fähigkeiten paketiert zu teilen. Durch Progressive Disclosure bleiben sie effizient, durch Modularität mächtig. Konzeptionell brillant - aber mit praktischen Herausforderungen."
 
 In der Interaktion mit Agenten geht alles um den Kontext. Das wissen wir alle.
 
-Wie ich schon in [Context is all you need](/blog/context-is-all-you-need) schrieb: Context Engineering ist die Kunst, dem LLM die Informationen zur richtigen Zeit zu geben. Es gibt hier keine geheime Zutat, es ist alles nur Nudelsuppe, wie auch Poe in Kung-Fu Panda lernt. Es geht nur darum, wann man was rein rein wirft.
+Wie ich schon in [Context is all you need](/blog/context-is-all-you-need) schrieb: Context Engineering ist die Kunst, dem LLM die Informationen zur richtigen Zeit zu geben. Es gibt hier keine geheime Zutat, es ist alles nur Nudelsuppe, wie auch Poe in Kung-Fu Panda lernt. Es geht nur darum, wann man was rein wirft.
 
-Aber eine Frage hatte ich dort nicht beantwortet: **Wie verwende ich wertvollen Kontext wieder?**
+Aber eine Frage hatte ich dort nicht beantwortet: **Wie mache ich wertvollen Kontext wiederverwendbar?**
 
 Stell dir vor: Du bringst einem Agenten mühsam bei, wie man professionelle PowerPoint-Präsentationen erstellt. Der Agent lernt das Layout, die Formatierung, die Best Practices. Nach zwei Stunden Iterationen funktioniert es perfekt.
 
@@ -22,7 +24,7 @@ Am nächsten Tag sitzt dein Kollege am Schreibtisch. Anderer Agent, gleiche Aufg
 
 Das ist, als würde jeder Koch in einem Restaurant täglich neu herausfinden müssen, wie man Nudelsuppe kocht. Funktioniert. Aber ineffizient.
 
-Klar, es gibt [Prompts](/blog/prompts-als-code). Die kann man parametrisieren, versionieren, wiederverwenden. Aber der **Anwender muss sie selbst auswählen** - der Agent weiß nicht, welcher Prompt gerade passt. Und Prompts sind nur Text, es gibt keine Möglichkeit, ihnen Tools mitzugeben, die ihre Fähigkeiten erweitern.
+Klar, es gibt [Prompts](/blog/prompts-als-code). Die kann man parametrisieren, versionieren, wiederverwenden. Aber der **Anwender muss sie selbst auswählen** - der Agent weiß nicht, welcher Prompt gerade passt. Und Prompts sind nur Text, keine Möglichkeit, Tools zu paketieren, die ihre Fähigkeiten erweitern.
 
 Offen blieb bisher die Antwort zum Gedanken **Was, wenn Agenten Fähigkeiten wie Module importieren könnten - und selbst entscheiden, wann sie welche brauchen?**
 
@@ -95,13 +97,15 @@ Agent Skills sind - konzeptionell betrachtet - genau diese Ideal-Lösung: Nicht 
 
 Ein Skill ist ein **Ordner mit einer `SKILL.md` Datei**. Das war's. Kein Server. Keine Infrastruktur. Nur Dateien.
 
+**Beispiel:** Der [PowerPoint-Skill von Anthropic](https://github.com/anthropics/skills/tree/main/skills/pptx)
+
 ```
-pptx-skill/
+skills/pptx/
 ├── SKILL.md              # Instructions + Metadata
-├── scripts/              # Optional: Python/Shell Scripts
-│   └── create_pptx.py
-└── references/           # Optional: Dokumentation
-    └── design-guide.md
+├── scripts/              # Python/Shell Scripts
+├── editing.md            # Referenzen
+├── pptxgenjs.md          # Dokumentation
+└── LICENSE.txt
 ```
 
 Die `SKILL.md` enthält YAML-Frontmatter und Markdown:
@@ -133,8 +137,10 @@ Hier wird es interessant. Skills nutzen **Progressive Disclosure** - und das ist
 
 **Wie es funktioniert:**
 
+![Ablauf von progressive Disclosure](./images/42-progressive-disclosure.png)
+
 1. **Discovery Phase**: Beim Start lädt der Agent nur `name` und `description` aller verfügbaren Skills
-   - Minimal Context Footprint
+   - Minimaler Context Footprint
    - Der Agent "weiß", welche Skills existieren
    - Aber lädt noch nicht die vollen Instructions
 
@@ -145,7 +151,7 @@ Hier wird es interessant. Skills nutzen **Progressive Disclosure** - und das ist
 
 3. **Execution Phase**: Der Agent nutzt die Instructions und führt optional Scripts aus
    - Kann Scripts aufrufen (`scripts/create_pptx.py`)
-   - Kann Referenzen lesen (`references/design-guide.md`)
+   - Kann Referenzen lesen (`editing.md`, `pptxgenjs.md`)
    - Kann Assets nutzen
 
 **Das ist fundamental anders als MCP Tools:**
@@ -158,22 +164,6 @@ Bei 50 Skills bedeutet das:
 - **Mit Skills:** 50 kurze Beschreibungen → Eine volle Skill-Anleitung bei Bedarf
 
 Das ist **Context-effizient**.
-
-### Vergleich zu responsible-vibe
-
-Ich nutze auch in [responsible-vibe-mcp](https://github.com/mrsimpson/responsible-vibe-mcp) Progressive Disclosure - aber anders:
-
-- **responsible-vibe:** Dynamische Tool-Rückgaben
-  - Tools geben zur **Laufzeit** phasenspezifische Prompts zurück
-  - "Du bist jetzt in der Design-Phase, hier sind die relevanten Instructions"
-  - Mächtig, projektspezifisch, zur Laufzeit entschieden
-
-- **Skills:** Statische Pakete
-  - Skills sind **deklarativ** - alles steht in `SKILL.md`
-  - Agent entscheidet, **welchen** Skill er lädt
-  - Portabel, wiederverwendbar, nicht projektspezifisch
-
-Beide nutzen Progressive Disclosure. Aber der eine ist dynamisch (Tool entscheidet), der andere statisch (Agent entscheidet).
 
 ## Mehr als nur Context
 
@@ -199,15 +189,13 @@ In meinen früheren Posts habe ich über Tools geschrieben, die **vorhandenen Co
 
 **Skills sind anders:**
 
-Skills **bringen neuen Context** - nämlich **Fähigkeiten**.
+Skills **bringen nicht nur modulare Prompts**, sondern ganze **Fähigkeiten**.
 
 Sie sind nicht nur ein weiteres Tool zur Context-Optimierung. Sie sind ein konzeptioneller Ansatz für **wiederverwendbares Agent-Wissen**.
 
 Und das Beste: **Das Format ist offen.**
 
-Initiiert von Anthropic, aber als [offener Standard](agentskills.io) veröffentlicht. Die Community kann beitragen, erweitern, eigene Skills bauen.
-
-Das ist keine proprietäre Lösung. Das ist ein **offenes Ökosystem**.
+Initiiert von Anthropic, aber als [offener Standard](https://agentskills.io) veröffentlicht. Die Community kann beitragen, erweitern, eigene Skills bauen. Skills sind keine proprietäre Lösung, sondern ein **offenes Ökosystem**, das auch in autonomen Werkzeugen (wie bspw. OpenClaw) eine große Anwendung findet.
 
 ## Die Realität: Das Teilen ist die Schwäche
 

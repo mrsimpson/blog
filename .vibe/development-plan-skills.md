@@ -81,7 +81,12 @@ Blogpost über Agent Skills (agentskills.io) schreiben, der zeigt:
 - **Progressive Disclosure:** Das Konzept von "nur laden, was gebraucht wird" passt perfekt zum Context-Engineering-Narrativ
 - **Positionierung:** Skills als vierte Säule im Context-Engineering-Ökosystem
 
-### Writing-Phase
+### Illustration-Phase
+- **Reale Skill-Struktur:** PowerPoint-Skill von Anthropic verlinkt und reale Ordnerstruktur gezeigt
+- **Progressive Disclosure Diagramm:** Bild erstellt und eingefügt (images/42-progressive-disclosure.png)
+- **Titelbild:** Roboter öffnet Paket, findet Werkzeug + Anleitung (images/41-skill-package.png)
+- **Korrekturlesung:** Tippfehler behoben (Werkzeug, doppeltes "rein"), Formulierungen geschärft, Link-Formatierung korrigiert
+- **Status:** Abgeschlossen - alle visuellen Elemente eingefügt, Text korrigiert
 - **Datei erstellt:** `src/content/blog/agent-skills-wiederverwendbares-wissen.md`
 - **Titel angepasst:** "Agent Skills – Fähigkeiten in handlichem Paket" (fokussiert auf modulares Wissen, nicht "voneinander lernen")
 - **Description gekürzt:** Auf Kern reduziert (Progressive Disclosure, Modularität)
