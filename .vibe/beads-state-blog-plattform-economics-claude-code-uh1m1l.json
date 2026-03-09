@@ -1,0 +1,34 @@
+{
+  "conversationId": "blog-plattform-economics-claude-code-uh1m1l",
+  "projectPath": "/Users/oliverjaegle/projects/privat/blog",
+  "epicId": "blog-5",
+  "phaseTasks": [
+    {
+      "phaseId": "discovery",
+      "phaseName": "Discovery",
+      "taskId": "blog-5.1"
+    },
+    {
+      "phaseId": "story",
+      "phaseName": "Story",
+      "taskId": "blog-5.2"
+    },
+    {
+      "phaseId": "writing",
+      "phaseName": "Writing",
+      "taskId": "blog-5.3"
+    },
+    {
+      "phaseId": "illustration",
+      "phaseName": "Illustration",
+      "taskId": "blog-5.4"
+    },
+    {
+      "phaseId": "distribution",
+      "phaseName": "Distribution",
+      "taskId": "blog-5.5"
+    }
+  ],
+  "createdAt": "2026-03-08T18:27:59.593Z",
+  "updatedAt": "2026-03-08T18:27:59.593Z"
+}
