@@ -1,7 +1,7 @@
 ---
 title: "Es funktioniert — also warum noch nachdenken?"
 pubDate: 2026-04-14
-description: "KI macht uns schneller. Aber was passiert, wenn alle schneller werden und dabei aufhören, gemeinsam zu denken?"
+description: "Wir saßen im selben Meeting, alle mit KI-Outputs bewaffnet. Die Ergebnisse stimmten überein. Das Ziel haben wir trotzdem verfehlt."
 tags: ["ai", "collaboration", "teams", "reflection", "mental-alignment"]
 authors: ["Oliver Jägle"]
 ---
@@ -11,6 +11,8 @@ authors: ["Oliver Jägle"]
 Eine Kollegin hatte Folien vorbereitet. Sie hatte eine Nutzerumfrage ausgewertet, die Ergebnisse aufbereitet, auf Folie zwei eine Management Summary geschrieben. Die anonymisierten Antworten waren als Referenz im Anhang. Das Ziel des Meetings: die Summary gemeinsam beschließen und daraus Maßnahmen ableiten.
 
 Ich kam nicht dazu, die Folien zu lesen.
+
+![Menschen in Meetings, jeder in seiner eigenen Blase](./images/49-people-in-bubbles.png)
 
 Als sie mich nach meiner Einschätzung fragte, tat ich das im aktuellen KI-Fieber Naheliegende: Ich öffnete die anonymisierten Antworten, steckte sie in ein KI-Tool, ließ klassifizieren. Das Ergebnis übernahm ich als mein eigenes Bild. Ich teilte es.
 
