@@ -10,73 +10,71 @@ authors: ["Oliver Jägle"]
 
 Wir haben ein neues Abrechnungsmodell für KI eingeführt. Viele Entwickler — mich eingeschlossen — nutzen die monatlichen Credits an einem einzigen Tag.
 
-Das war das Ziel. Nicht Sparsamkeit. Adoption. 
+Das ist die direkte Folge eines über das letzte Jahr intensiv verfolgten Ziels: Wir wollten KI-Adoption, nicht Sparsamkeit.
 
-Die KI-Anbieter haben mit Flatrates gelockt — "unbegrenzte" Nutzung zu fairen Preisen. Und wir sind reingegangen. Ein Jahr lang haben wir daran gearbeitet, KI in unsere Prozesse zu bringen. Wir wollten sehen, was wirkt. Und es wirkt. Überall.
+Die KI-Anbieter haben mit Flatrates gelockt — "unbegrenzte" Nutzung zu fairen Preisen. Und wir haben es genutzt. Ein Jahr lang haben wir daran gearbeitet, KI in unsere Prozesse zu bringen. Wir wollten sehen, was wirkt. Und es wirkt. Überall.
 
-Das war schon erwartbar. Aber wir haben es bewusst ignoriert, um die Anpassung nicht zu gefährden.
+Dass die Preise irgendwann anziehen würden, war erwartbar. Aber wir haben es bewusst ignoriert, um die Anpassung nicht zu gefährden.
 
-## Alle sind dran
+## Wir sind nicht die einzigen
 
 Hier ist das Problem: Alle haben das gemacht. Nicht nur wir.
 
 Alle Unternehmen haben KI-Adoption vorangetrieben. Alle sehen Ergebnisse. Und jetzt werden die Abrechnungen transparent. Die Kosten werden sichtbar.
 
-Die Early-Adopter-Vorteile sind weg. Was bleibt, sind die Kosten und eine unbequeme Frage: Was tun wir jetzt?
+Die Early-Adopter-Vorteile, der "unfair advantage" durch die Nutzung von KI, das ist weg. Was bleibt, sind die Kosten und eine unbequeme Frage: Was tun wir jetzt?
 
 Die naheliegende Reaktion ist rationieren. Weniger nutzen. Sparen.
 
-Das ist verlockend, bis man die Konsequenzen durchdenkt.
+Das ist verlockend, aber die Konsequenzen sind weitreichend.
 
 ## Das Dilemma: Wenn wir bremsen, bremsen andere nicht
 
-Wenn wir weniger nutzen, während die Konkurrenz weitermacht — haben wir einen unfair disadvantage.
+Wenn wir weniger nutzen, während die Konkurrenz weitermacht — haben wir auf einmal einen unfair disadvantage.
 
-Das ist kein Drama-Szenario. Das ist Realität. Und es erklärt, warum "einfach sparen" nicht funktioniert: Wir sitzen in einer Situation wie legales Doping. Alle machen es, und wenn du nicht mitmachst, bist du der Dumme.
+Das ist kein Drama-Szenario. Das ist Realität. Und es erklärt, warum "einfach sparen" nicht funktioniert: Wir sind in einer Situation, die (legalem) Doping ähnelt. Alle machen es, und wenn du nicht mitmachst, bist du der Langsamere.
 
-Token-Preise fallen zwar, aber das Volumen explodiert. Die Hyperscaler investieren Milliarden. Der Markt hat sich kalibriert — und jeder, der bremst, schaut zu, wie andere weitermachen.
+Token-Preise fallen zwar, aber das Volumen explodiert. Die Hyperscaler investieren Milliarden. Der Markt hat sich kalibriert — und jeder, der bremst, schaut zu, wie andere überholen. Und Kunden schauen immer zu, wer vorne liegt.
 
-Das ist die eine Seite. Die andere ist subtiler und wichtiger.
+Das ist die eine Seite. Aber es gibt noch eine andere andere. Subtiler, vielleicht sogar wichtiger.
 
 ## Was wirklich passiert, wenn man rationiert
 
 Entwickler haben nicht nur KI-Tools gelernt. Sie haben ihre Methodik geändert.
 
-Das sieht man überall: Kürzere Schätzungen. Schnellere Iterationen. Andere Prozesse. Bessere Lösungen. Ich kenne Entwickler, die sagen: "Meine Schätzung ist jetzt anders, weil ich anders arbeite."
+Das sieht man überall: Kürzere Schätzungen. Schnellere Iterationen. Andere Prozesse. Bessere Lösungen. Ich kenne viele Entwickler, die offen sagen: "Meine Schätzung ist jetzt niedriger, weil ich mit KI anders arbeite." "Supercharged Developers", wie ich sie gerne nenne.
 
-Das sind nicht "supercharged developers, weil sie KI haben". Das sind Entwickler, die gelernt haben, anders zu denken.
+Sie sind aber nicht "supercharged", weil KI ihre Arbeit macht. Es sind Entwickler, die gelernt haben, mit KI-Werkzeugen anders zu denken, zu arbeiten und neuartig Lösungen zu finden.
 
-Jetzt: Wenn man rationiert, tut man etwas Subtiles und Gefährliches.
+Wenn man diese Werkzeuge jetzt rationiert, tut man etwas Subtiles und Gefährliches.
 
-Es sieht aus wie "wir sparen ein bisschen". Aber was passiert, ist: Man nimmt Entwicklern ein Werkzeug weg, das Teil ihrer neuen Methodik ist.
+Es sieht aus wie "wir sparen ein bisschen". Aber was passiert, ist: Man nimmt Entwicklern ihre neue Methodik, ihre angepasste Art, Lösungen zu finden. Schon der Gedanke "Kann ich es mir leisten, jetzt mit meinem Agenten wir üblich das Problem zu lösen" reduziert nicht die Arbeitsweise, sondern zerstört sie.
 
-Und das Narrativ wird falsch. Es sieht aus wie "KI war doch nur ein Gimmick". Aber das ist nicht das, was die Entwickler erleben. Sie erleben: "Mir wird gerade die Fähigkeit genommen, so zu arbeiten, wie ich gelernt habe zu arbeiten."
+Und auch nach Außen wirdfdas Narrativ falsch. Entweder mutet es an wie "KI war doch nur ein Gimmick" (wenn es doch irgendwie weiter geht) oder es wird der Anschein erweckt, dass "KI die eigtnliche Arbeit gemacht hätte" . Aber das ist nicht das, was Entwickler erleben. Sie erleben: "Mir wird gerade die Fähigkeit genommen, so zu arbeiten, wie ich gelernt habe zu arbeiten."
 
-Das ist psychologisch schwierig. Und methodisch zerstört du die Kompetenz, die du gerade aufgebaut hast.
+Das ist psychologisch schwierig. Und methodisch zerstört man die Kompetenz, die man gerade aufwändig aufgebaut hat.
 
 ## Die "Kunden zahlen lassen"-Falle
 
 Eine Variante ist, die Kosten an Kunden weiterzugeben. Token-Kosten transparent machen, sie mit in Rechnung stellen.
 
-Das klingt fair, aber es erzeugt sofort Reibung.
+Plötzlich müssen Entwickler Kunden gegenüber rechtfertigen, warum KI so teuer ist. Kunden stellen Fragen: "Brauchst du das wirklich?" Und der Entwickler kann nicht einfach sagen "ja", weil die veränderte Methodik und deren Auswirkungen für Außenstehende schwer zu erfassen sind.
 
-Plötzlich müssen Entwickler Kunden gegenüber rechtfertigen, warum KI so teuer ist. Kunden stellen Fragen: "Brauchst du das wirklich?" Und der Entwickler kann nicht einfach sagen "ja", weil jetzt Tokens sichtbar als Kosten eingepreist sind.
+Auch, wenn es zunächst fair klingt, erzeugt es Misstrauen — und Rechtfertigungs-Bedarf schafft Reibung.
 
-Das erzeugt Misstrauen. Nicht weil KI schlecht ist, sondern weil die Kosten transparent geworden sind — und Rechtfertigungs-Bedarf schafft Reibung.
+Und kein Kunde mag Reibung. Wenn ich als Kunde woanders "Supercharged Developers" einkaufen kann, bei denen die Kosten zwar im Tagessatz einpereist sind, die dafür aber doch so viel schneller sind – dann verzichte ich auf Reibung.
 
-Und Kunden merken das. Sie kaufen woanders "eingereiste" Supercharged-Developer günstiger ein — wo die Kosten versteckt im Tagessatz sind.
-
-Also auch das funktioniert nicht.
+Das funktioniert also auch nicht.
 
 ## Was könnte helfen
 
-Nicht rationieren führt zu Kosten-Eskalation. Rationieren führt zu Kompetenz-Verlust. Auf Kunden umlegen führt zu Reibung.
+Nicht rationieren führt zu Kosten-Explosion. Rationieren führt zu Kompetenz-Verlust. Auf Kunden umlegen führt zu Reibung.
 
 Was könnte stattdessen funktionieren?
 
 **Erstens: Transparenz, nicht Kontrolle.**
 
-Entwickler sollten sehen, wie viele Tokens sie nutzen. Aber nicht als Strafe. Als Reflexion. Damit sie selbst fragen können: "Brauche ich KI dafür?" 
+Entwickler sollten sehen, wie viele Tokens sie nutzen und welche Kosten sie verusachen. Aber nicht als Strafe, sondern als Grundlage für Reflexion. Damit sie selbst fragen können: "Brauche ich KI dafür?" 
 
 Das ist anders als Rationierung. Das ist Kultur.
 
@@ -88,7 +86,7 @@ Das ist kein Sparen. Das ist Handwerk.
 
 **Drittens: KI-Kompetenz als permanente Kultur-Sache begreifen.**
 
-Das ist nicht eine "Kostensparen-Initiative". Das ist wie jede andere Craft: Reflexion, kontinuierliche Verbesserung. Es gehört in Retros, Code-Reviews, "was hat funktioniert, was nicht"-Sessions.
+KI-Adoption ist keine "Kostensparen-Initiative". Sie ist wie jedes andere Handwerkszeug: Sie benötigt Reflexion, kontinuierliche Verbesserung. Dies gehört in Retros, Code-Reviews, "was hat funktioniert, was nicht"-Sessions.
 
 Das ist das Gegenteil von Rationierung. Das ist Investition.
 
@@ -102,8 +100,4 @@ Ich nutze die Tokens trotzdem. An einem Tag.
 
 Aber für manche Aufgaben brauche ich viele Tokens — weil es Fragestellungen sind, die aufwändige Lösungsfindung verlangen. Und das ist okay. Das ist nicht Verschwendung. Das ist der Punkt, an dem KI wirkt.
 
-Ich fange an, es anders zu denken: Nicht "wie weniger?", sondern "wann und warum?" Das ist die Frage, die Sinn macht.
-
----
-
-*Meine Kollegin Meike May hat dieselbe Situation aus ihrer Perspektive beschrieben — und beleuchtet, was das für echte Zusammenarbeit bedeutet: [Ein Meeting, das seltsam abbog](../schwarmintelligenz-meike)*
+Und das wollten wir doch eigentlich, nicht?
