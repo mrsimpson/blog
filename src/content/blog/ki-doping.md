@@ -6,7 +6,7 @@ tags: ["ai", "ki", "entwicklung", "unternehmen", "strategie", "teams"]
 authors: ["Oliver Jägle"]
 ---
 
-# Die Tokens sind weg – und mit ihnen mehr als nur ein "unfair advantage"
+# Die Tokens sind weg – Und wenn wir nicht aufpassen noch viel mehr
 
 Wir haben ein neues Abrechnungsmodell für KI eingeführt. Viele Entwickler — mich eingeschlossen — nutzen die monatlichen Credits an einem einzigen Tag.
 
