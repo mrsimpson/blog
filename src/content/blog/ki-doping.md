@@ -6,7 +6,7 @@ tags: ["ai", "ki", "entwicklung", "unternehmen", "strategie", "teams"]
 authors: ["Oliver Jägle"]
 ---
 
-# Die Tokens sind weg – Und wenn wir nicht aufpassen noch viel mehr
+# Die Tokens sind weg – und mit ihnen mehr als nur ein "unfair advantage"
 
 Wir haben ein neues Abrechnungsmodell für KI eingeführt. Viele Entwickler — mich eingeschlossen — nutzen die monatlichen Credits an einem einzigen Tag.
 
@@ -36,7 +36,7 @@ Das ist kein Drama-Szenario. Das ist Realität. Und es erklärt, warum "einfach 
 
 Token-Preise fallen zwar, aber das Volumen explodiert. Die Hyperscaler investieren Milliarden. Der Markt hat sich kalibriert — und jeder, der bremst, schaut zu, wie andere überholen. Und Kunden schauen immer zu, wer vorne liegt.
 
-Das ist die eine Seite. Aber es gibt noch eine andere andere. Subtiler, vielleicht sogar wichtiger.
+Das ist die eine Seite. Aber es gibt noch eine andere Seite. Subtiler, vielleicht sogar wichtiger.
 
 ## Was wirklich passiert, wenn man rationiert
 
@@ -48,9 +48,9 @@ Sie sind aber nicht "supercharged", weil KI ihre Arbeit macht. Es sind Entwickle
 
 Wenn man diese Werkzeuge jetzt rationiert, tut man etwas Subtiles und Gefährliches.
 
-Es sieht aus wie "wir sparen ein bisschen". Aber was passiert, ist: Man nimmt Entwicklern ihre neue Methodik, ihre angepasste Art, Lösungen zu finden. Schon der Gedanke "Kann ich es mir leisten, jetzt mit meinem Agenten wir üblich das Problem zu lösen" reduziert nicht die Arbeitsweise, sondern zerstört sie.
+Es sieht aus wie "wir sparen ein bisschen". Aber was passiert, ist: Man nimmt Entwicklern ihre neue Methodik, ihre angepasste Art, Lösungen zu finden. Schon der Gedanke "Kann ich es mir leisten, jetzt mit meinem Agenten wie üblich das Problem zu lösen" reduziert nicht die Arbeitsweise, sondern zerstört sie.
 
-Und auch nach Außen wirdfdas Narrativ falsch. Entweder mutet es an wie "KI war doch nur ein Gimmick" (wenn es doch irgendwie weiter geht) oder es wird der Anschein erweckt, dass "KI die eigtnliche Arbeit gemacht hätte" . Aber das ist nicht das, was Entwickler erleben. Sie erleben: "Mir wird gerade die Fähigkeit genommen, so zu arbeiten, wie ich gelernt habe zu arbeiten."
+Und auch nach Außen wird das Narrativ falsch. Entweder mutet es an wie "KI war doch nur ein Gimmick" (wenn es doch irgendwie weiter geht) oder es wird der Anschein erweckt, dass "KI die eigentliche Arbeit gemacht hätte". Aber das ist nicht das, was Entwickler erleben. Sie erleben: "Mir wird gerade die Fähigkeit genommen, so zu arbeiten, wie ich gelernt habe zu arbeiten."
 
 Das ist psychologisch schwierig. Und methodisch zerstört man die Kompetenz, die man gerade aufwändig aufgebaut hat.
 
@@ -62,7 +62,7 @@ Plötzlich müssen Entwickler Kunden gegenüber rechtfertigen, warum KI so teuer
 
 Auch, wenn es zunächst fair klingt, erzeugt es Misstrauen — und Rechtfertigungs-Bedarf schafft Reibung.
 
-Und kein Kunde mag Reibung. Wenn ich als Kunde woanders "Supercharged Developers" einkaufen kann, bei denen die Kosten zwar im Tagessatz einpereist sind, die dafür aber doch so viel schneller sind – dann verzichte ich auf Reibung.
+Und kein Kunde mag Reibung. Wenn ich als Kunde woanders "Supercharged Developers" einkaufen kann, bei denen die Kosten zwar im Tagessatz eingepreist sind, die dafür aber doch so viel schneller sind – dann verzichte ich auf Reibung.
 
 Das funktioniert also auch nicht.
 
@@ -76,7 +76,7 @@ Was könnte das konkret bedeuten?
 
 **Erstens: Transparenz, nicht Kontrolle.**
 
-Entwickler sollten sehen, wie viele Tokens sie nutzen und welche Kosten sie verusachen. Aber nicht als Strafe, sondern als Grundlage für Reflexion. Damit sie selbst fragen können: "Brauche ich KI dafür?" 
+Entwickler sollten sehen, wie viele Tokens sie nutzen und welche Kosten sie verursachen. Aber nicht als Strafe, sondern als Grundlage für Reflexion. Damit sie selbst fragen können: "Brauche ich KI dafür?" 
 
 Das ist anders als Rationierung. Das ist Kultur.
 
@@ -102,4 +102,4 @@ Ich nutze die Tokens trotzdem. An einem Tag.
 
 Aber für manche Aufgaben brauche ich viele Tokens — weil es Fragestellungen sind, die aufwändige Lösungsfindung verlangen. Und das ist okay. Das ist nicht Verschwendung. Das ist der Punkt, an dem KI wirkt.
 
-Und das wollten wir doch eigentlich, nicht?
+Und das wollten wir doch eigentlich, oder nicht?
