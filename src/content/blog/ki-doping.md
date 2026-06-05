@@ -70,7 +70,9 @@ Das funktioniert also auch nicht.
 
 Nicht rationieren führt zu Kosten-Explosion. Rationieren führt zu Kompetenz-Verlust. Auf Kunden umlegen führt zu Reibung.
 
-Was könnte stattdessen funktionieren?
+Der Ausweg liegt nicht in weniger Nutzung, sondern in bewussteren Entscheidungen. Nicht in Kontrolle, sondern Reflexion. Nicht in Zurück zu alten Werkzeugen, sondern bessere Nutzung der Neuen.
+
+Was könnte das konkret bedeuten?
 
 **Erstens: Transparenz, nicht Kontrolle.**
 
