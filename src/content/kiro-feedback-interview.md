@@ -1,6 +1,10 @@
 # Voice of Pioneers – Kiro Feedback Interview
 *Hypothetisches Interview zwischen einem Kiro Product Manager und Oliver Jägle (Senior Software Engineer, DB)*
 
+> **tl;dr:** Kiro verfolgt einen interessanten und ziemlich einzigartigen Ansatz: die Integration von Workflow, Agent und IDE in einem Produkt. Aber er ist noch nicht Fisch und nicht Fleisch. Spec-Driven Development als einziges Vorgehensmodell ist zu schwergewichtig für explorative Entwicklung und zu grobgranular für echte Kontrolle – die Specs suggerieren Human-in-the-Loop, sind in der Praxis aber eine Illusion davon. Gleichzeitig bietet Kiro nicht genug Autonomie, um technik-ferneren Rollen echtes Enterprise-Vibe-Coding zu ermöglichen. Ein Potential liegt in kleineren Inkrementen, explorativen Workflows neben SDD, und echtem Backpressure durch statische Analyse – ein Werkzeug, das Engineers hilft, besser zu entscheiden, statt schneller zu generieren.
+
+**tl;dr:** Kiro ist der erste ernstzunehmende Versuch, Engineering – nicht nur Coding – mit KI zu unterstützen. Die Integration von Workflow, Agent und IDE ist der richtige Ansatz. Aber Spec-Driven Development löst das falsche Problem: Es erzeugt beeindruckende Dokumentation und suggeriert Human-in-the-Loop – beides ist in der Praxis eine Illusion von Kontrolle, keine echte. Das Potenzial liegt woanders: in kleineren Inkrementen, explorativen Workflows neben SDD, und echtem Backpressure durch statische Analyse. Ein Werkzeug, das Engineers hilft, besser zu entscheiden – statt schneller zu generieren.
+
 ---
 
 ## Frage 1
@@ -143,6 +147,10 @@ Kurz: Wenn Kiro mir das Gefühl gibt, dass ich als Engineer wirklich die Kontrol
 
 # Voice of Pioneers – Kiro Feedback Interview (English)
 *Hypothetical interview between a Kiro Product Manager and Oliver Jägle (Senior Software Engineer, DB)*
+
+> **tl;dr:** Kiro takes an interesting and fairly unique approach: integrating workflow, agent, and IDE into a single product. But it's neither fish nor fowl. Spec-Driven Development as the sole workflow model is too heavyweight for exploratory development and too coarse-grained for genuine control – the specs suggest Human-in-the-Loop but are in practice an illusion of it. At the same time, Kiro doesn't offer enough autonomy to enable genuine enterprise-level vibe coding for less technical roles. A potential lies in smaller increments, exploratory workflows alongside SDD, and real backpressure through static analysis – a tool that helps engineers make better decisions, rather than generate faster.
+
+**tl;dr:** Kiro is the first serious attempt to support engineering – not just coding – with AI. The integration of workflow, agent, and IDE is the right approach. But Spec-Driven Development solves the wrong problem: it produces impressive documentation and suggests Human-in-the-Loop – in practice, both are an illusion of control, not the real thing. The potential lies elsewhere: in smaller increments, exploratory workflows alongside SDD, and genuine backpressure through static analysis. A tool that helps engineers decide better – rather than generate faster.
 
 ---
 
